@@ -236,7 +236,8 @@ document.getElementById("sheetDl").addEventListener("click",()=>setTimeout(close
 document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeSheet(); });
 document.addEventListener("click",e=>{const c=e.target.closest("[data-app]"); if(c){ e.preventDefault(); openSheet(APPS[+c.dataset.app]); return; }});
 document.addEventListener("click",e=>{const b=e.target.closest("[data-copy]"); if(b) copy(b.dataset.copy);});
-document.getElementById("shareBtn").onclick=()=>copy(location.href.split("#")[0]);
+const SHORT_LINK = "https://is.gd/CBl6Wo"; // الرابط المختصر للصفحة
+document.getElementById("shareBtn").onclick=()=>copy(SHORT_LINK);
 render();
 </script>
 </body>
